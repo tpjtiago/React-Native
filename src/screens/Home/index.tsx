@@ -41,6 +41,66 @@ export function Home() {
             category: '1',
             date: '22/06 ás 20:40',
             description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+        },
+        {
+            id: '3',
+            guild: {
+                id: '1',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '1',
+            date: '22/06 ás 20:40',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+        },
+        {
+            id: '4',
+            guild: {
+                id: '1',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '1',
+            date: '22/06 ás 20:40',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+        },
+        {
+            id: '5',
+            guild: {
+                id: '1',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '1',
+            date: '22/06 ás 20:40',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+        },
+        {
+            id: '6',
+            guild: {
+                id: '1',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '1',
+            date: '22/06 ás 20:40',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+        },
+        {
+            id: '7',
+            guild: {
+                id: '1',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '1',
+            date: '22/06 ás 20:40',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
         }
     ]
     function handleCategorySelect(categoryId: string) {
@@ -68,26 +128,27 @@ export function Home() {
                 setCategory={setCategory}
             />
 
-            <View style={styles.content}>
+            <View>
                 <ListHeader
                     title="Partidas Agendadas"
                     subtitle="Total 6"
                 />
 
-                <FlatList
-                    data={appoinments}
-                    keyExtractor={item => item.id}
-                    renderItem={({ item }) => (
-                        <Appointment
-                            data={item}
-                            onPress={handleAppointmentDetails}
-                        />
-                    )}
-                    ItemSeparatorComponent={() => <ListDivider />}
-                    style={styles.matches}
-                    showsVerticalScrollIndicator={false}
-                />
             </View>
+            <FlatList
+                data={appoinments}
+                keyExtractor={item => item.id}
+                renderItem={({ item }) => (
+                    <Appointment
+                        data={item}
+                        onPress={handleAppointmentDetails}
+                    />
+                )}
+                ItemSeparatorComponent={() => <ListDivider />}
+                contentContainerStyle={{ paddingBottom: 69 }}
+                style={styles.matches}
+                showsVerticalScrollIndicator={false}
+            />
         </Background>
     );
 }

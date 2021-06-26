@@ -18,7 +18,7 @@ const guilds = [
         name: 'Galera RL',
         icon: 'image.png',
         owner: true
-    }
+    },
 ]
 type Props = {
     handleGuildSelect: (guild: GuildProps) => void;
@@ -36,7 +36,9 @@ export function Guilds({ handleGuildSelect }: Props) {
                         onPress={() => handleGuildSelect(item)} />
                 )}
                 showsVerticalScrollIndicator={false}
-                ItemSeparatorComponent={() => <ListDivider />}
+                ItemSeparatorComponent={() => <ListDivider isCentered />}
+                ListHeaderComponent={() => <ListDivider isCentered />}
+                contentContainerStyle={{ paddingBottom: 68, paddingTop: 104 }}
                 style={styles.guilds}
             />
         </View>
