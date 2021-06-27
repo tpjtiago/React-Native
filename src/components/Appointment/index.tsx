@@ -8,14 +8,14 @@ import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 
 
-import { GuildIcon } from "../GuildIcon/Index";
+import { GuildIcon } from "../GuildIcon";
 import { categories } from "../../utils/categories";
 import { theme } from "../../global/styles/theme";
 import { GuildProps } from "../Guild";
 
 
 export type AppointmentProps = {
-    id: string,
+    id: string;
     guild: GuildProps;
     category: string;
     date: string;
@@ -37,7 +37,7 @@ export function Appointment({ data, ...rest }: Props) {
                     style={styles.guildIconContainer}
                     colors={[secondary50, secondary70]}
                 >
-                    <GuildIcon />
+                    <GuildIcon guildId={data.guild.id} iconId={data.guild.icon} />
                 </LinearGradient>
 
                 <View style={styles.content}>
