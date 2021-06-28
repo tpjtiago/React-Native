@@ -22,12 +22,13 @@ import { ModalView } from '../../components/ModalView';
 import { Background } from '../../components/Background';
 import { SmallInput } from '../../components/SmallInput';
 
-import { GuildIcon } from '../../components/GuildIcon';
+
 import { TextArea } from '../../components/TextArea';
 import { GuildProps } from '../../components/Guild';
 import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
 import { Guilds } from '../Guilds';
+import { GuildIcon } from '../../components/GuildIcon';
 
 
 export function AppointmentCreate() {
